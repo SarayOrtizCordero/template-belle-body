@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Belle Body — Centro de Estética en Lomas de San Isidro, Buenos Aires. Tratamientos faciales, corporales, day spa y gift vouchers. Solo con turno previo.">
+    <title>Belle Body — Centro de Estética · Lomas de San Isidro</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Belle Body — Centro de Estética · Buenos Aires">
+    <meta property="og:description" content="Tratamientos faciales, corporales, spa y gift vouchers en Lomas de San Isidro. Atención personalizada con tecnología de última generación.">
+    <meta property="og:image" content="assets/images/og-cover.jpg">
+    <meta property="og:url" content="https://bellebody.com.ar">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Belle Body">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Belle Body — Centro de Estética · Buenos Aires">
+    <meta name="twitter:description" content="Tratamientos faciales, corporales, spa y gift vouchers en Lomas de San Isidro.">
+    <meta name="twitter:image" content="assets/images/og-cover.jpg">
+    <!-- Theme color mobile -->
+    <meta name="theme-color" content="#9B6E8A">
+
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
+
+    <!-- Preload: imagen hero (LCP crítico) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=90" fetchpriority="high">
+    <!-- Preconnect a CDNs -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <!-- Nuestro CSS primero: @font-face con font-display:swap toma precedencia -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.1.0/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/dm-sans@5.0.0/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Belle Body",
+        "description": "Centro de Estética en Lomas de San Isidro. Tratamientos faciales, corporales, day spa y gift vouchers.",
+        "url": "https://bellebody.com.ar",
+        "telephone": "+541164445405",
+        "email": "esteticabellebody@yahoo.com.ar",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Diego Palma 1423, oficina 1",
+            "addressLocality": "Lomas de San Isidro",
+            "addressRegion": "Buenos Aires",
+            "addressCountry": "AR"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "09:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "17:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/estetica_belle_body/",
+            "https://www.facebook.com/bellebody/"
+        ],
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- FAB WHATSAPP -->
+    <a href="https://api.whatsapp.com/send?phone=541164445405&text=Hola%20Belle%20Body%2C%20me%20gustar%C3%ADa%20reservar%20un%20turno."
+       class="whatsapp-btn" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Volver al inicio de la página">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 14V4M5 8l4-4 4 4"/></svg>
+    </button>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-overlay" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+        <button class="mobile-overlay-close" id="menuClose" aria-label="Cerrar menú">✕</button>
+        <a href="#tratamientos">Tratamientos</a>
+        <a href="#nosotras">Nosotras</a>
+        <a href="#spa">Spa & Gift</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#reservar" class="mobile-overlay-cta">Reservar turno</a>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-logo" aria-label="Belle Body — volver al inicio">
+            <img src="assets/images/logo.png" alt="Belle Body" class="nav-logo-img">
+        </a>
+        <ul class="nav-links" role="list">
+            <li><a href="#tratamientos">Tratamientos</a></li>
+            <li><a href="#nosotras">Nosotras</a></li>
+            <li><a href="#spa">Spa & Gift</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#reservar" class="nav-reserve">Reservar turno</a>
+        <button class="nav-burger" id="menuOpen" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-label="Sección principal — Belle Body">
+        <div class="hero-bg" id="heroBg" role="img" aria-label="Centro de estética Belle Body"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Centro de Estética · Lomas de San Isidro</p>
+            <h1 class="hero-title">Tu piel merece<br><em>lo mejor</em></h1>
+            <p class="hero-sub">Un espacio exclusivo y personalizado donde cada tratamiento está pensado para vos. Porque cuidarte es un placer, no una obligación.</p>
+            <a href="#reservar" class="hero-cta">
+                Reservar turno
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-strip" role="region" aria-label="Datos del centro">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Tratamientos faciales</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Planes corporales</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Paquetes spa</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Atención personalizada</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRATAMIENTOS FACIALES -->
+    <section class="services section" id="tratamientos" aria-label="Tratamientos faciales">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Tratamientos Faciales</span>
+                <h2 class="section-title">Rituales para tu rostro</h2>
+                <p class="section-subtitle">Protocolos personalizados con tecnología de última generación y activos de alta concentración para que tu piel brille.</p>
+            </div>
+        </div>
+
+        <div class="carousel-wrapper" id="carouselTrack" role="region" aria-label="Carrusel de tratamientos faciales">
+
+            <article class="service-card reveal">
+                <span class="service-card-badge">Facial</span>
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80" alt="Microneedling con dermapen" class="service-card-img" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <p class="service-card-cat">Inducción de colágeno</p>
+                    <h3 class="service-card-name">Microneedling (Dermapen)</h3>
+                    <div class="service-card-meta">
+                        <span class="service-card-chip">60–90 min</span>
+                        <span class="service-card-chip">Colágeno</span>
+                        <span class="service-card-chip">Sin cirugía</span>
+                    </div>
+                    <p class="service-card-desc">Terapia segura y eficaz que genera neocolagenogénesis mediante mini punciones. Piel lisa, uniforme e iluminada. Ideal para poros dilatados y cicatrices de acné.</p>
+                    <hr class="service-card-sep">
+                    <a href="#reservar" class="service-card-cta">
+                        Reservar
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M7 3l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal reveal-d1">
+                <span class="service-card-badge">Facial</span>
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=700&q=80" alt="Dermaplaning con cuchilla quirúrgica" class="service-card-img" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <p class="service-card-cat">Exfoliación avanzada</p>
+                    <h3 class="service-card-name">Dermaplaning</h3>
+                    <div class="service-card-meta">
+                        <span class="service-card-chip">45–60 min</span>
+                        <span class="service-card-chip">Sin dolor</span>
+                        <span class="service-card-chip">Resultado inmediato</span>
+                    </div>
+                    <p class="service-card-desc">Raspado controlado con cuchilla quirúrgica estéril a 45°. Elimina células muertas y vello facial. Minimiza líneas finas y cicatrices dejando la piel suave y vibrante.</p>
+                    <hr class="service-card-sep">
+                    <a href="#reservar" class="service-card-cta">
+                        Reservar
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M7 3l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal reveal-d2">
+                <span class="service-card-badge">Facial</span>
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=700&q=80" alt="Limpieza facial profunda" class="service-card-img" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <p class="service-card-cat">Limpieza & pureza</p>
+                    <h3 class="service-card-name">Limpieza Facial Profunda</h3>
+                    <div class="service-card-meta">
+                        <span class="service-card-chip">60 min</span>
+                        <span class="service-card-chip">Pureza profunda</span>
+                        <span class="service-card-chip">4 variantes</span>
+                    </div>
+                    <ul class="service-card-list">
+                        <li>Limpieza facial clásica con extracciones</li>
+                        <li>Espátula ultrasónica</li>
+                        <li>Punta de diamantes + extracciones</li>
+                        <li>Tratamiento para espalda</li>
+                    </ul>
+                    <hr class="service-card-sep">
+                    <a href="#reservar" class="service-card-cta">
+                        Reservar
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M7 3l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal reveal-d3">
+                <span class="service-card-badge">Facial</span>
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=80" alt="Radiofrecuencia multipolar lifting sin cirugía" class="service-card-img" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <p class="service-card-cat">Antiedad & lifting</p>
+                    <h3 class="service-card-name">Radiofrecuencia Multipolar</h3>
+                    <div class="service-card-meta">
+                        <span class="service-card-chip">45–60 min</span>
+                        <span class="service-card-chip">Lifting</span>
+                        <span class="service-card-chip">Sin cirugía</span>
+                    </div>
+                    <p class="service-card-desc">Lifting sin cirugía. Activa la producción de colágeno y elastina. También disponible: rejuvenecimiento total (electroporación + radiofrecuencia) y tratamientos para rosácea y acné.</p>
+                    <hr class="service-card-sep">
+                    <a href="#reservar" class="service-card-cta">
+                        Reservar
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M7 3l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal reveal-d3">
+                <span class="service-card-badge">Facial</span>
+                <div class="service-card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=700&q=80" alt="Peeling químico y enzimático" class="service-card-img" loading="lazy">
+                </div>
+                <div class="service-card-body">
+                    <p class="service-card-cat">Renovación celular</p>
+                    <h3 class="service-card-name">Peelings & Electroporación</h3>
+                    <div class="service-card-meta">
+                        <span class="service-card-chip">45 min</span>
+                        <span class="service-card-chip">Renovación</span>
+                        <span class="service-card-chip">Sin agujas</span>
+                    </div>
+                    <ul class="service-card-list">
+                        <li>Peeling mecánico (punta de diamantes)</li>
+                        <li>Peelings químicos y enzimáticos</li>
+                        <li>Electroporación (mesoterapia sin agujas)</li>
+                        <li>Masajes faciales · Guasha</li>
+                    </ul>
+                    <hr class="service-card-sep">
+                    <a href="#reservar" class="service-card-cta">
+                        Reservar
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M7 3l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="container" style="padding-top:.5rem;">
+            <div class="carousel-nav" role="group" aria-label="Controles del carrusel">
+                <button class="carousel-btn" id="carouselPrev" aria-label="Tratamiento anterior">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 4l-5 5 5 5"/></svg>
+                </button>
+                <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Indicador de posición"></div>
+                <button class="carousel-btn" id="carouselNext" aria-label="Siguiente tratamiento">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4l5 5-5 5"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRATAMIENTOS CORPORALES -->
+    <section class="spa-section" id="corporales" aria-label="Tratamientos corporales">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Tratamientos Corporales</span>
+                <h2 class="section-title">Planes diseñados para tu cuerpo</h2>
+                <p class="section-subtitle">Combinaciones de tecnología y técnica profesional para reducción, tonificación, celulitis y drenaje.</p>
+            </div>
+            <div class="spa-grid">
+
+                <div class="spa-card reveal">
+                    <span class="spa-card-tag">Reafirmante</span>
+                    <h3 class="spa-card-name">Plan Firm Up</h3>
+                    <p class="spa-card-dur">Reafirma piel · Tonificación muscular</p>
+                    <p class="spa-card-desc">Ondas rusas para tonificación y elevación de glúteos (30 min) + Radiofrecuencia bipolar Genotherm para tratar adiposidades y efecto lifting. Activa el metabolismo celular local y modela la zona tratada.</p>
+                </div>
+
+                <div class="spa-card reveal reveal-d1">
+                    <span class="spa-card-tag">Reducción</span>
+                    <h3 class="spa-card-name">Plan Adipo Stop</h3>
+                    <p class="spa-card-dur">Adiposidad localizada · Modelación</p>
+                    <p class="spa-card-desc">Protocolo específico para tratar adiposidades localizadas. Combina tecnología de última generación para lograr una reducción eficaz y modelación de la silueta.</p>
+                </div>
+
+                <div class="spa-card reveal reveal-d2">
+                    <span class="spa-card-tag">Celulitis</span>
+                    <h3 class="spa-card-name">Plan Celu Out</h3>
+                    <p class="spa-card-dur">Celulitis grado 1 a 3 · Drenaje</p>
+                    <p class="spa-card-desc">Ultrasonido 3MHz + ondas interferenciales y rusas + presoterapia. Excelente para celulitis grado 2 y 3. Variante Celu Out 1: ultrasonido + algas. Variante Celu Out 2: electroporación + vendas frías.</p>
+                </div>
+
+                <div class="spa-card reveal">
+                    <span class="spa-card-tag">Drenaje</span>
+                    <h3 class="spa-card-name">Plan Dreen</h3>
+                    <p class="spa-card-dur">Vendas frías · Presoterapia secuencial</p>
+                    <p class="spa-card-desc">Vendas frías + presoterapia secuencial para descongestionar zonas sobrecargadas. El contraste frío-calor favorece la circulación, elimina toxinas y descongestionas las zonas tratadas.</p>
+                </div>
+
+                <div class="spa-card reveal reveal-d1">
+                    <span class="spa-card-tag">Estrías</span>
+                    <h3 class="spa-card-name">Tratamiento de Estrías</h3>
+                    <p class="spa-card-dur">Estimulación · Regeneración</p>
+                    <p class="spa-card-desc">Protocolo especializado para la mejora visible de estrías mediante técnicas de estimulación celular y regeneración del tejido cutáneo.</p>
+                </div>
+
+                <div class="spa-card reveal reveal-d2">
+                    <span class="spa-card-tag">Electroterapia</span>
+                    <h3 class="spa-card-name">Electrodos Total</h3>
+                    <p class="spa-card-dur">Tonificación integral · Muscular</p>
+                    <p class="spa-card-desc">Tratamiento de electroestimulación integral para tonificación muscular y reducción. Trabaja el cuerpo completo con corrientes de alta efectividad.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FILOSOFÍA / NOSOTRAS -->
+    <section class="philosophy" id="nosotras" aria-label="Nuestra filosofía">
+        <div class="philosophy-inner reveal">
+            <div class="philosophy-rule" aria-hidden="true"></div>
+            <h2 class="philosophy-title">El cuidado que merecés<br>empieza con <em>atención personalizada</em></h2>
+            <p class="philosophy-body">
+                En Belle Body nos ocupamos de cada paciente de forma individual. No existen dos pieles iguales ni dos cuerpos iguales, por eso cada tratamiento se adapta a tus objetivos, tu piel y tu ritmo de vida.
+            </p>
+            <p class="philosophy-body">
+                Trabajamos con equipos de última tecnología y activos de laboratorios de reconocida trayectoria, tanto nacionales como importados. Tu bienestar y tus resultados son nuestra prioridad.
+            </p>
+            <div class="philosophy-values" role="list">
+                <div class="philosophy-value" role="listitem">
+                    <div class="philosophy-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M10 2C6 2 3 5 3 9c0 5 7 9 7 9s7-4 7-9c0-4-3-7-7-7z"/></svg>
+                    </div>
+                    <span class="philosophy-value-label">Atención personalizada</span>
+                </div>
+                <div class="philosophy-value" role="listitem">
+                    <div class="philosophy-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25"><circle cx="10" cy="10" r="3"/><path d="M10 1v3M10 16v3M1 10h3M16 10h3M4 4l2 2M12 12l2 2M14 4l-2 2M6 12l-2 2"/></svg>
+                    </div>
+                    <span class="philosophy-value-label">Tecnología avanzada</span>
+                </div>
+                <div class="philosophy-value" role="listitem">
+                    <div class="philosophy-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M10 3c3.5 0 6 2.5 6 5.5 0 4-6 9-6 9S4 12.5 4 8.5C4 5.5 6.5 3 10 3z"/><path d="M10 11V7M8 9h4"/></svg>
+                    </div>
+                    <span class="philosophy-value-label">Resultados reales</span>
+                </div>
+                <div class="philosophy-value" role="listitem">
+                    <div class="philosophy-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M10 2l2.5 5H18l-4.5 3.5 1.75 5.5L10 13l-5.25 3 1.75-5.5L2 7h5.5z"/></svg>
+                    </div>
+                    <span class="philosophy-value-label">Excelencia profesional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPA -->
+    <section class="section" id="spa" aria-label="Day Spa y Gift Voucher" style="background:var(--cream);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Day Spa</span>
+                <h2 class="section-title">Experiencias de bienestar total</h2>
+                <p class="section-subtitle">Paquetes pensados para que salgas completamente relajada y renovada. Perfectos también como regalo.</p>
+            </div>
+            <div class="spa-grid">
+
+                <div class="spa-card reveal">
+                    <span class="spa-card-tag">2 horas</span>
+                    <h3 class="spa-card-name">Exotic Spa</h3>
+                    <p class="spa-card-dur">Un camino milenario de espiritualidad y relajación</p>
+                    <p class="spa-card-desc">Pulido corporal con exfoliante purificante · Masaje descontracturante 40 min con aceites naturales y crema de 31 óleos · Hidratación corporal · Limpieza facial con shock de vitamina C.</p>
+                </div>
+
+                <div class="spa-card reveal reveal-d1">
+                    <span class="spa-card-tag">1h 40 min</span>
+                    <h3 class="spa-card-name">Spa Belle Body</h3>
+                    <p class="spa-card-dur">Todo para irte súper relajada y linda</p>
+                    <p class="spa-card-desc">Masaje descontracturante de espalda, piernas y pies (1 hs) + Presoterapia (drenaje linfático mecánico) + Limpieza facial premium con máscara antiage de caviar y oliva, o máscara super hidratante y antifatiga.</p>
+                </div>
+
+                <div class="spa-card reveal reveal-d2">
+                    <span class="spa-card-tag">Desde 1h 15 min</span>
+                    <h3 class="spa-card-name">Mini Spa</h3>
+                    <p class="spa-card-dur">4 opciones a medida</p>
+                    <p class="spa-card-desc">Opción 1: Masaje 45 min + limpieza facial con vitamina C. Opción 2: Pulido corporal + hidratación con algoterapia + masaje. Opción 3: Masaje espalda, piernas y pies + presoterapia. Opción 4 (2 hs): Masaje + limpieza facial profunda con punta de diamantes.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GIFT VOUCHER -->
+    <section class="gift-section" aria-label="Gift Voucher">
+        <div class="gift-inner reveal">
+            <span class="eyebrow">Gift Voucher</span>
+            <h2 class="section-title" style="color:var(--cream);max-width:none;">Regalá una experiencia única</h2>
+            <p class="section-subtitle" style="color:rgba(250,247,245,.65);max-width:none;margin-bottom:0;">Comprá tu Gift Voucher online a través de Mercado Pago. En pocos pasos el regalo llega por email.</p>
+
+            <div class="gift-steps">
+                <div class="gift-step">
+                    <span class="gift-step-num">01</span>
+                    <p class="gift-step-text">Elegí el paquete que más te guste y hacé click en <em>comprar</em>.</p>
+                </div>
+                <div class="gift-step">
+                    <span class="gift-step-num">02</span>
+                    <p class="gift-step-text">Cuando se acredite el pago, recibís confirmación por email de Mercado Pago.</p>
+                </div>
+                <div class="gift-step">
+                    <span class="gift-step-num">03</span>
+                    <p class="gift-step-text">Para regalo: informá los datos de la beneficiaria y enviamos el voucher por email.</p>
+                </div>
+                <div class="gift-step">
+                    <span class="gift-step-num">04</span>
+                    <p class="gift-step-text">Presentate el día del turno con DNI y el Gift Voucher impreso. ¡Válido solo para mujeres!</p>
+                </div>
+            </div>
+
+            <a href="https://api.whatsapp.com/send?phone=541164445405&text=Hola%2C%20quiero%20comprar%20un%20Gift%20Voucher" target="_blank" rel="noopener noreferrer" class="gift-cta">
+                Consultar Gift Vouchers
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria" aria-label="Galería del centro">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Nuestro Centro</span>
+                <h2 class="section-title">Un espacio pensado para vos</h2>
+                <p class="section-subtitle">Un ambiente cálido, tranquilo y exclusivo en Lomas de San Isidro. Solo con turno previo.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80" alt="Sala de tratamientos Belle Body" loading="lazy">
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=600&q=80" alt="Cabina facial Belle Body" loading="lazy">
+                </div>
+                <div class="gallery-item reveal reveal-d2">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Tratamiento facial en Belle Body" loading="lazy">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Productos de cosmética Belle Body" loading="lazy">
+                </div>
+                <div class="gallery-item reveal reveal-d1">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Masaje relajante Belle Body" loading="lazy">
+                </div>
+                <div class="gallery-item reveal reveal-d2">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80" alt="Tratamiento corporal Belle Body" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials section" id="testimonios" aria-label="Testimonios de clientas">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Experiencias reales</span>
+                <h2 class="section-title">Lo que dicen nuestras clientas</h2>
+            </div>
+            <div class="testimonials-grid">
+
+                <div class="testimonial reveal">
+                    <div class="testimonial-top">
+                        <div class="testimonial-mark" aria-hidden="true">"</div>
+                        <div class="testimonial-stars" role="img" aria-label="5 estrellas de 5"><span aria-hidden="true">★★★★★</span></div>
+                    </div>
+                    <p class="testimonial-text">Una genia sin duda! Un ambiente cálido y súper tranquilo. Me hice limpieza, peeling, las pestañas... siempre quedo divina!</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=88&h=88&q=80" alt="Lara Grillo" class="testimonial-avatar" loading="lazy">
+                        <div>
+                            <p class="testimonial-name">Lara Grillo</p>
+                            <p class="testimonial-role">Estudiante · San Isidro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial reveal reveal-d1">
+                    <div class="testimonial-top">
+                        <div class="testimonial-mark" aria-hidden="true">"</div>
+                        <div class="testimonial-stars" role="img" aria-label="5 estrellas de 5"><span aria-hidden="true">★★★★★</span></div>
+                    </div>
+                    <p class="testimonial-text">Excelente lugar y atención, profesionales muy capacitados. Volvería sin dudarlo!</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=88&h=88&q=80" alt="Ana Flajszer" class="testimonial-avatar" loading="lazy">
+                        <div>
+                            <p class="testimonial-name">Ana Flajszer</p>
+                            <p class="testimonial-role">Empresaria · Buenos Aires</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial reveal reveal-d2">
+                    <div class="testimonial-top">
+                        <div class="testimonial-mark" aria-hidden="true">"</div>
+                        <div class="testimonial-stars" role="img" aria-label="5 estrellas de 5"><span aria-hidden="true">★★★★★</span></div>
+                    </div>
+                    <p class="testimonial-text">Desde que me trata Silvina la piel cambió maravillosamente. No me imagino sin mis sesiones en Belle Body.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=88&h=88&q=80" alt="Eliana Lemos" class="testimonial-avatar" loading="lazy">
+                        <div>
+                            <p class="testimonial-name">Eliana Lemos</p>
+                            <p class="testimonial-role">Mamá · Lomas de San Isidro</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIOS & CONTACTO -->
+    <section class="horarios-section section" id="contacto" aria-label="Horarios y contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Visitanos</span>
+                <h2 class="section-title">Horarios y contacto</h2>
+                <p class="section-subtitle">Atendemos solo con turno previo. Reservá por WhatsApp o completá el formulario.</p>
+            </div>
+            <div class="horarios-grid reveal">
+
+                <div class="horarios-card">
+                    <div class="horarios-card-head">
+                        <div class="horarios-head-icon" aria-hidden="true">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8.5" cy="8.5" r="7"/><path d="M8.5 5v3.5l2.5 2"/></svg>
+                        </div>
+                        <p class="horarios-head-label">Horarios de atención</p>
+                    </div>
+                    <table class="horarios-table" aria-label="Horarios de atención">
+                        <tr class="cerrado"><td>Lunes</td><td>Cerrado</td></tr>
+                        <tr><td>Martes</td><td>9:00 – 20:00</td></tr>
+                        <tr><td>Miércoles</td><td>9:00 – 20:00</td></tr>
+                        <tr><td>Jueves</td><td>9:00 – 20:00</td></tr>
+                        <tr><td>Viernes</td><td>9:00 – 20:00</td></tr>
+                        <tr><td>Sábados</td><td>9:00 – 17:00</td></tr>
+                        <tr class="cerrado"><td>Domingos</td><td>Cerrado</td></tr>
+                    </table>
+                    <div class="horarios-appt-note">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.5" y="2.5" width="12" height="11" rx="1.5"/><path d="M5 1v3M10 1v3M1.5 6h12"/></svg>
+                        <span>Solo con turno previo · Reservá con anticipación</span>
+                    </div>
+                </div>
+
+                <div class="horarios-card">
+                    <div class="horarios-card-head">
+                        <div class="horarios-head-icon" aria-hidden="true">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8.5 1C5.5 1 3 3.5 3 6.5c0 4 5.5 8.5 5.5 8.5s5.5-4.5 5.5-8.5C14 3.5 11.5 1 8.5 1z"/><circle cx="8.5" cy="6.5" r="1.75"/></svg>
+                        </div>
+                        <p class="horarios-head-label">Encontranos</p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1C5 1 2.5 3.5 2.5 6.5c0 4 5.5 8.5 5.5 8.5s5.5-4.5 5.5-8.5C13.5 3.5 11 1 8 1z"/><circle cx="8" cy="6.5" r="1.5"/></svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Dirección</p>
+                                <p class="contact-val">Diego Palma 1423, oficina 1<br>Lomas de San Isidro</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h12v10H2zM2 3l6 5 6-5"/></svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p class="contact-val"><a href="mailto:esteticabellebody@yahoo.com.ar">esteticabellebody@yahoo.com.ar</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2.5A1.5 1.5 0 013.5 1h.879a1 1 0 01.958.713l.656 2.295a1 1 0 01-.33 1.044L4.5 5.97c.73 1.498 1.89 2.71 3.338 3.502l1.09-1.09a1 1 0 011.044-.33l2.295.656A1 1 0 0113.5 9.74V10.5A1.5 1.5 0 0112 12c-5.523 0-10-4.477-10-10z"/></svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Teléfono / WhatsApp</p>
+                                <p class="contact-val"><a href="https://api.whatsapp.com/send?phone=541164445405">11 6444 5405</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="2.5"/><circle cx="11.5" cy="4.5" r=".75" fill="currentColor" stroke="none"/></svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Instagram</p>
+                                <p class="contact-val"><a href="https://www.instagram.com/estetica_belle_body/" target="_blank" rel="noopener">@estetica_belle_body</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=541164445405&text=Hola%20Belle%20Body%2C%20me%20gustar%C3%ADa%20reservar%20un%20turno." class="contact-wa-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        Reservar por WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE RESERVA -->
+    <section class="section" id="reservar" style="background:var(--cream);" aria-label="Formulario de reserva de turno">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Reserva tu turno</span>
+                <h2 class="section-title">Comenzá tu experiencia</h2>
+                <p class="section-subtitle">Completá el formulario y nos ponemos en contacto para confirmar tu turno en Belle Body.</p>
+            </div>
+
+            <div class="booking-card reveal">
+                <form id="bookingForm" novalidate aria-label="Formulario de solicitud de turno">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fname" class="form-label">Nombre <span aria-hidden="true">*</span></label>
+                            <input type="text" id="fname" name="fname" class="form-input" placeholder="Tu nombre" required autocomplete="given-name" aria-required="true" aria-describedby="fname-error">
+                            <span id="fname-error" class="form-error" role="alert" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" class="form-label">Apellido <span aria-hidden="true">*</span></label>
+                            <input type="text" id="lname" name="lname" class="form-input" placeholder="Tu apellido" required autocomplete="family-name" aria-required="true" aria-describedby="lname-error">
+                            <span id="lname-error" class="form-error" role="alert" aria-live="polite"></span>
+                        </div>
+                    </div>
+                    <div class="form-grid" style="margin-bottom:1.25rem;">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required autocomplete="email" aria-required="true" aria-describedby="email-error">
+                            <span id="email-error" class="form-error" role="alert" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="11 XXXX XXXX" autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="form-grid" style="margin-bottom:1.25rem;">
+                        <div class="form-group">
+                            <label for="service" class="form-label">Tratamiento <span aria-hidden="true">*</span></label>
+                            <div class="form-select-wrap">
+                                <select id="service" name="service" class="form-select" required aria-required="true" aria-describedby="service-error">
+                                    <option value="" disabled selected>Seleccioná un tratamiento</option>
+                                    <optgroup label="Tratamientos Faciales">
+                                        <option>Microneedling (Dermapen)</option>
+                                        <option>Dermaplaning</option>
+                                        <option>Limpieza facial profunda</option>
+                                        <option>Radiofrecuencia Multipolar</option>
+                                        <option>Peeling químico / enzimático</option>
+                                        <option>Electroporación</option>
+                                        <option>Punta de diamantes</option>
+                                        <option>Tratamiento antiacné</option>
+                                        <option>Tratamiento rosácea</option>
+                                    </optgroup>
+                                    <optgroup label="Tratamientos Corporales">
+                                        <option>Plan Firm Up</option>
+                                        <option>Plan Adipo Stop</option>
+                                        <option>Plan Celu Out</option>
+                                        <option>Plan Dreen</option>
+                                        <option>Tratamiento de Estrías</option>
+                                        <option>Electrodos Total</option>
+                                    </optgroup>
+                                    <optgroup label="Spa & Gift">
+                                        <option>Exotic Spa (2 hs)</option>
+                                        <option>Spa Belle Body (1h 40 min)</option>
+                                        <option>Mini Spa</option>
+                                        <option>Gift Voucher</option>
+                                    </optgroup>
+                                </select>
+                                <svg class="form-select-arrow" width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5l4.5 4.5L11 5"/></svg>
+                            </div>
+                            <span id="service-error" class="form-error" role="alert" aria-live="polite"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="form-label">Fecha preferida</label>
+                            <input type="date" id="date" name="date" class="form-input">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.5rem;">
+                        <label for="message" class="form-label">Notas o consultas</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Contanos sobre tu objetivo, condición de salud relevante o cualquier consulta..." aria-describedby="msg-hint"></textarea>
+                        <span id="msg-hint" class="form-hint">Esta información nos ayuda a preparar tu tratamiento de forma personalizada.</span>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        Solicitar mi turno
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+                    <p class="form-note">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="5" width="8" height="6" rx="1"/><path d="M4 5V3.5a2 2 0 0 1 4 0V5"/></svg>
+                        Tus datos están protegidos y no serán cedidos a terceros.
+                    </p>
+                </form>
+                <div class="form-success" id="formSuccess" role="alert" aria-live="polite" tabindex="-1">
+                    <div class="success-icon" aria-hidden="true">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 14l5 5L21 8"/></svg>
+                    </div>
+                    <h3 class="success-title">¡Solicitud recibida!</h3>
+                    <p class="success-body">Gracias por contactar a Belle Body. Nos comunicaremos con vos a la brevedad para confirmar tu turno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-top">
+            <div>
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Belle Body" class="footer-logo-img">
+                </div>
+                <p class="footer-tagline">Centro de Estética en Lomas de San Isidro. Un espacio exclusivo y personalizado para tu bienestar.</p>
+            </div>
+            <div>
+                <p class="footer-col-h">Tratamientos</p>
+                <ul class="footer-links">
+                    <li><a href="#tratamientos">Tratamientos Faciales</a></li>
+                    <li><a href="#corporales">Tratamientos Corporales</a></li>
+                    <li><a href="#spa">Day Spa</a></li>
+                    <li><a href="#spa">Gift Voucher</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-col-h">Centro</p>
+                <ul class="footer-links">
+                    <li><a href="#nosotras">Nuestra Filosofía</a></li>
+                    <li><a href="#galeria">Nuestro Espacio</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#reservar">Reservar Turno</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-col-h">Contacto</p>
+                <ul class="footer-links">
+                    <li><a href="https://api.whatsapp.com/send?phone=541164445405">11 6444 5405</a></li>
+                    <li><a href="mailto:esteticabellebody@yahoo.com.ar">esteticabellebody@yahoo.com.ar</a></li>
+                    <li><a href="https://www.facebook.com/bellebody/" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/estetica_belle_body/" target="_blank" rel="noopener">Instagram</a></li>
+                </ul>
+                <p style="font-size:.8rem;color:rgba(250,247,245,.38);margin-top:.875rem;line-height:1.7;">
+                    Diego Palma 1423, of. 1<br>Lomas de San Isidro<br><br>
+                    Mar–Vie: 9:00 – 20:00<br>Sáb: 9:00 – 17:00<br>Lun y Dom: Cerrado
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2025 Belle Body. Todos los derechos reservados. Solo con turno previo.</p>
+            <nav class="footer-social" aria-label="Redes sociales de Belle Body">
+                <a href="https://www.instagram.com/estetica_belle_body/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://www.facebook.com/bellebody/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=541164445405" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">✕</button>
+        <button type="button" class="lightbox-prev" id="lightboxPrev" aria-label="Imagen anterior">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 4l-5 5 5 5"/></svg>
+        </button>
+        <button type="button" class="lightbox-next" id="lightboxNext" aria-label="Siguiente imagen">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 4l5 5-5 5"/></svg>
+        </button>
+        <figure class="lightbox-figure">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="" loading="eager">
+            <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
+        </figure>
+    </div>
+
+    <!-- AVISO DE PRIVACIDAD -->
+    <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Aviso de privacidad y datos personales">
+        <p class="cookie-text">
+            Belle Body recopila datos personales a través del formulario de reserva conforme a la
+            <strong>Ley&nbsp;25.326</strong> de Protección de Datos Personales de Argentina.
+        </p>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-accept" id="cookieAccept">Entendido</button>
+            <button type="button" class="cookie-dismiss" id="cookieDismiss" aria-label="Cerrar aviso">✕</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
