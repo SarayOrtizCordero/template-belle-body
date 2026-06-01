@@ -369,7 +369,7 @@ button {
 .hero-bg {
     position: absolute;
     inset: -15% 0;
-    background: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=90') center/cover no-repeat;
+    background: url('../assets/images/hero.jpg') center/cover no-repeat;
     will-change: transform;
 }
 
